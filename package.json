@@ -1,0 +1,46 @@
+{
+  "name": "@red-cup-engineering/consumption-hedge-service",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "The pool's consumption hedge: forward-buys a household's winter propane or electricity in the fill season, books it as inventory at the forward price against a pool liability/receivable, marks it against winter spot, and settles repayment as tally-credit draws -- the fintech-under-energy-descent note's section 3.2 realized as a sleeve over position-sizing-service.",
+  "keywords": [
+    "561-group",
+    "consumption-hedge",
+    "propane",
+    "energy-descent",
+    "position-sizing",
+    "financial-engineering"
+  ],
+  "scripts": {
+    "check": "for f in src/*.mjs scripts/*.mjs apps/*.mjs; do node --check \"$f\" || exit 1; done",
+    "test": "node --test test/*.test.mjs"
+  },
+  "exports": {
+    ".": "./src/consumption-hedge.mjs",
+    "./derive-household-burn-series": "./scripts/derive-household-burn-series.mjs",
+    "./derive-hedge-position": "./scripts/derive-hedge-position.mjs",
+    "./book-hedge-position": "./scripts/book-hedge-position.mjs",
+    "./mark-hedge-position": "./scripts/mark-hedge-position.mjs",
+    "./settle-hedge-repayment": "./scripts/settle-hedge-repayment.mjs",
+    "./cli": "./apps/consumption-hedge-cli.mjs",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "consumption-hedge": "apps/consumption-hedge-cli.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/pool-service": "workspace:*",
+    "@red-cup-engineering/position-sizing-service": "workspace:*",
+    "@red-cup-engineering/semiotic-eavt-services-section": "workspace:*"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "sideEffects": false,
+  "files": [
+    "src",
+    "scripts",
+    "apps",
+    "README.md"
+  ]
+}
