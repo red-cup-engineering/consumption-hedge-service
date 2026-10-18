@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "type": "module",
   "description": "The pool's consumption hedge: forward-buys a household's winter propane or electricity in the fill season, books it as inventory at the forward price against a pool liability/receivable, marks it against winter spot, and settles repayment as tally-credit draws -- the fintech-under-energy-descent note's section 3.2 realized as a sleeve over position-sizing-service.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/financial-engineering-services-section.git",
+    "directory": "services/consumption-hedge-service"
+  },
   "keywords": [
     "561-group",
     "consumption-hedge",
