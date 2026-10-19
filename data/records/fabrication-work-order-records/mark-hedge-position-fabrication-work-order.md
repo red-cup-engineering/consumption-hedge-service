@@ -3,7 +3,7 @@
 - `mark-against-spot`: The operation must compute markValue as gallons times (spot minus forward) from a declared PROPANE_GAL/KWH price-directive-shaped input.
 - `book-realized-on-delivery`: When delivered is true, the operation must return a balanced Beancount transaction relieving the inventory at its forward cost basis, recognizing the heating expense at spot value, and plugging the difference to a realized gain or loss account, omitted when the mark is exactly flat.
 ## Prohibitions
-- `no-transaction-when-undelivered`: The operation must return `transaction: null` when delivered is false; an undelivered mark is an interim valuation only, never booked.
+- `no-transaction-when-undelivered`: The operation must return `transaction: null` when delivered is false; an undelivered mark is an interim valuation only, never booked. [claims: only-delivery-books]
 ## Laws
 - `mark-against-spot-law` | Fintech under energy descent, section 3.2 (561 Group finance note) | 2026-09-05 | content/text/documents/articles/notes/2026/09/05/2026-09-05-note-on-fintech-under-energy-descent.md (561-group-finance-operations-services-section) | Applies to the returned markValue and its sign. | The pool books the position as inventory at the forward price and marks it against the winter spot price.
 - `pure-data-transformation-law` | The language law (owner-stated 2026-08-30) | v1 | .claude/rules/org-layering.md | Applies to markHedgePosition as data transformation, never I/O. | I/O with a system is written in Node; a decision that is only data transformation performs no I/O of its own.
@@ -12,6 +12,9 @@
 - `beancount-double-entry-syntax` | Beancount | v3.2 | https://beancount.github.io/docs/beancount_language_syntax.html | Applies to the rendered delivered transaction. | Transactions use Beancount's plain-text double-entry syntax; conformance is verified by bean-check.
 ## Open questions
 none
+## Claims
+- `dep-computer-ledger-system-services-section` | measured | dependency | @red-cup-engineering/computer-ledger-system-services-section@0.4.0 is published on the Group registry | none | data/records/2026-10-19-work-order-evidence/npm-view-red-cup-engineering-computer-ledger-system-services-section-0-4-0.json | sha256:abf771c66b796e6f0ad6728555dc1f4bd41bb725fec16be21c10989ef2e7873a | npm view of @red-cup-engineering/computer-ledger-system-services-section@0.4.0 returned its name, version and integrity (2026-10-19)
+- `only-delivery-books` | derived | world | A position is booked only when the heating oil is delivered, and until then its mark is an interim valuation | none | requirement:book-realized-on-delivery; constraint:mark-against-spot-law | The requirement books the realized gain or loss when delivered is true, and the law values the mark against spot without recognizing it
 ## Package
 ```json
 {"packageName":"@red-cup-engineering/scratch-mark-hedge-position-20260905-service","packageVersion":"0.1.0","license":"UNLICENSED","dependencies":{"@red-cup-engineering/computer-ledger-system-services-section":"0.4.0"},"devDependencies":{}}

@@ -3,7 +3,7 @@
 - `two-book-posting`: The operation must render two Beancount transactions from one pre-buy fill: the member's book debits an inventory account in PROPANE_GAL at the forward price against a credit to a pool liability account, and the pool's book debits a receivable account against a credit to its float cash account, for the exact same amount.
 - `shared-witness-metadata`: Both rendered transactions must carry the same `witness` metadata field naming the contract document's identity.
 ## Prohibitions
-- `refuses-cost-mismatch`: The operation must throw rather than book when the declared contractCost does not exactly equal gallons multiplied by forwardPrice.
+- `refuses-cost-mismatch`: The operation must throw rather than book when the declared contractCost does not exactly equal gallons multiplied by forwardPrice. [claims: both-books-carry-the-same-amount]
 ## Laws
 - `two-book-law` | Fintech under energy descent, section 3.2 (561 Group finance note) | 2026-09-05 | content/text/documents/articles/notes/2026/09/05/2026-09-05-note-on-fintech-under-energy-descent.md (561-group-finance-operations-services-section) | Applies to the two rendered transactions. | The pool books the position as inventory at the forward price and marks it against spot; a physical margin is hedged, never disintermediated.
 - `pure-data-transformation-law` | The language law (owner-stated 2026-08-30) | v1 | .claude/rules/org-layering.md | Applies to bookHedgePosition as data transformation, never I/O. | I/O with a system is written in Node; a decision that is only data transformation performs no I/O of its own.
@@ -12,6 +12,9 @@
 - `beancount-double-entry-syntax` | Beancount | v3.2 | https://beancount.github.io/docs/beancount_language_syntax.html | Applies to every rendered transaction. | Transactions use Beancount's plain-text double-entry syntax; conformance is verified by bean-check.
 ## Open questions
 none
+## Claims
+- `dep-computer-ledger-system-services-section` | measured | dependency | @red-cup-engineering/computer-ledger-system-services-section@0.4.0 is published on the Group registry | none | data/records/2026-10-19-work-order-evidence/npm-view-red-cup-engineering-computer-ledger-system-services-section-0-4-0.json | sha256:abf771c66b796e6f0ad6728555dc1f4bd41bb725fec16be21c10989ef2e7873a | npm view of @red-cup-engineering/computer-ledger-system-services-section@0.4.0 returned its name, version and integrity (2026-10-19)
+- `both-books-carry-the-same-amount` | derived | world | The two books record the same amount, which must be gallons times the forward price | none | requirement:two-book-posting; constraint:two-book-law | The requirement posts both books for the exact same amount and the law keeps the member's and the pool's book in agreement, so a declared cost that is not gallons times price would split them
 ## Package
 ```json
 {"packageName":"@red-cup-engineering/scratch-book-hedge-position-20260905-service","packageVersion":"0.1.0","license":"UNLICENSED","dependencies":{"@red-cup-engineering/computer-ledger-system-services-section":"0.4.0"},"devDependencies":{}}

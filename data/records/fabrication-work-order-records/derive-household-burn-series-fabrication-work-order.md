@@ -1,9 +1,9 @@
 # derive-household-burn-series
 ## Requirements
-- `heating-season-grouping`: The operation must group monthly readings into heating seasons running July of a start year through June of the next, labeled "<startYear>-<startYear+1>".
+- `heating-season-grouping`: The operation must group monthly readings into heating seasons running July of a start year through June of the next, labeled `"<startYear>-<startYear+1>"`.
 - `admits-one-complete-season`: The operation must return an admitted burn series (average season total and a joule barrier) when at least one heating season ending at or before `input.asOf` is present.
 ## Prohibitions
-- `refuses-fewer-than-one-season`: The operation must refuse, returning a refusal datum naming the cutoff date rather than fabricating a barrier, when no season in the input is complete (ends at or before `input.asOf`).
+- `refuses-fewer-than-one-season`: The operation must refuse, returning a refusal datum naming the cutoff date rather than fabricating a barrier, when no season in the input is complete (ends at or before `input.asOf`). [claims: no-complete-season-no-barrier]
 ## Laws
 - `barrier-in-joules` | Fintech under energy descent, section 2 (561 Group finance note) | 2026-09-05 | content/text/documents/articles/notes/2026/09/05/2026-09-05-note-on-fintech-under-energy-descent.md (561-group-finance-operations-services-section) | Applies to the returned `barrierJoules`. | The barrier is denominated in joules (gallons x 91,500 BTU x 1055 J/BTU), invariant under a currency regime change.
 - `pure-data-transformation-law` | The language law (owner-stated 2026-08-30) | v1 | .claude/rules/org-layering.md | Applies to deriveHouseholdBurnSeries as data transformation, never I/O. | I/O with a system is written in Node; a decision that is only data transformation performs no I/O of its own.
@@ -11,6 +11,9 @@
 - `node-esm-operation` | Node.js | v24.2.0+ | https://nodejs.org/docs/v24/api/esm.html | Applies to the .mjs operation, its import.meta.main guard, and downstream package-birth assays. | The package uses one executable ESM operation source file eligible for downstream staged package-birth assays.
 ## Open questions
 none
+## Claims
+- `dep-computer-ledger-system-services-section` | measured | dependency | @red-cup-engineering/computer-ledger-system-services-section@0.4.0 is published on the Group registry | none | data/records/2026-10-19-work-order-evidence/npm-view-red-cup-engineering-computer-ledger-system-services-section-0-4-0.json | sha256:abf771c66b796e6f0ad6728555dc1f4bd41bb725fec16be21c10989ef2e7873a | npm view of @red-cup-engineering/computer-ledger-system-services-section@0.4.0 returned its name, version and integrity (2026-10-19)
+- `no-complete-season-no-barrier` | derived | world | Without a complete heating season there is no average season total to derive a barrier from | none | requirement:admits-one-complete-season | The requirement admits a series only when at least one season ends at or before the as-of date, and the barrier is the joule form of the average season total
 ## Package
 ```json
 {"packageName":"@red-cup-engineering/scratch-derive-household-burn-series-20260905-service","packageVersion":"0.1.0","license":"UNLICENSED","dependencies":{"@red-cup-engineering/computer-ledger-system-services-section":"0.4.0"},"devDependencies":{}}

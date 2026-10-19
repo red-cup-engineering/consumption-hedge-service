@@ -3,8 +3,8 @@
 - `hedges-only-when-worthy`: The operation must size a pre-buy position through position-sizing-service only when the seasonal spread (declared winter spot minus the pre-buy forward price) clears the float's cost of capital plus the deposit's opportunity cost, and the local basis against the benchmark is within a declared threshold.
 - `repayment-schedule-sums-exact`: The operation must spread the admitted contract cost evenly across the declared repayment months, the last installment absorbing any rounding remainder, so the schedule sums exactly to the contract cost.
 ## Prohibitions
-- `refuses-unworthy-hedge`: The operation must refuse, naming the reason, rather than size a position when the spread does not clear cost or the basis exceeds its threshold.
-- `refuses-unadmitted-burn-series`: The operation must refuse, naming the reason, when given a burn series that is not itself admitted.
+- `refuses-unworthy-hedge`: The operation must refuse, naming the reason, rather than size a position when the spread does not clear cost or the basis exceeds its threshold. [claims: hedge-worth-is-the-requirement]
+- `refuses-unadmitted-burn-series`: The operation must refuse, naming the reason, when given a burn series that is not itself admitted. [claims: an-unadmitted-series-has-no-barrier]
 ## Laws
 - `sleeve-barrier-in-joules` | Fintech under energy descent, section 2 and 3.2 (561 Group finance note) | 2026-09-05 | content/text/documents/articles/notes/2026/09/05/2026-09-05-note-on-fintech-under-energy-descent.md (561-group-finance-operations-services-section) | Applies to the sizing request's sleeve.barrierJoules. | The sleeve's barrier is the household's winter heating energy in joules, not dollars.
 - `pure-data-transformation-law` | The language law (owner-stated 2026-08-30) | v1 | .claude/rules/org-layering.md | Applies to deriveHedgePosition as data transformation, never I/O. | I/O with a system is written in Node; a decision that is only data transformation performs no I/O of its own.
@@ -12,6 +12,11 @@
 - `node-esm-operation` | Node.js | v24.2.0+ | https://nodejs.org/docs/v24/api/esm.html | Applies to the .mjs operation, its import.meta.main guard, and downstream package-birth assays. | The package uses one executable ESM operation source file eligible for downstream staged package-birth assays.
 ## Open questions
 none
+## Claims
+- `dep-position-sizing-service` | measured | dependency | @red-cup-engineering/position-sizing-service@0.2.0 is published on the Group registry | none | data/records/2026-10-19-work-order-evidence/npm-view-red-cup-engineering-position-sizing-service-0-2-0.json | sha256:bdd8f6ad5222a081cd199266ba03a3ece45e2efaaf876ea0a4f77187aca4cfca | npm view of @red-cup-engineering/position-sizing-service@0.2.0 returned its name, version and integrity (2026-10-19)
+- `dep-computer-ledger-system-services-section` | measured | dependency | @red-cup-engineering/computer-ledger-system-services-section@0.4.0 is published on the Group registry | none | data/records/2026-10-19-work-order-evidence/npm-view-red-cup-engineering-computer-ledger-system-services-section-0-4-0.json | sha256:abf771c66b796e6f0ad6728555dc1f4bd41bb725fec16be21c10989ef2e7873a | npm view of @red-cup-engineering/computer-ledger-system-services-section@0.4.0 returned its name, version and integrity (2026-10-19)
+- `hedge-worth-is-the-requirement` | derived | world | A hedge is sized only when the seasonal spread clears the cost of capital plus the deposit's opportunity cost and the basis is within its threshold | none | requirement:hedges-only-when-worthy | The requirement states the two conditions under which a position is sized, so otherwise there is none to size
+- `an-unadmitted-series-has-no-barrier` | derived | world | A burn series that is not admitted carries no joule barrier to hedge against | none | constraint:sleeve-barrier-in-joules | The law denominates the barrier in joules, which only an admitted series provides
 ## Package
 ```json
 {"packageName":"@red-cup-engineering/scratch-derive-hedge-position-20260905-service","packageVersion":"0.1.0","license":"UNLICENSED","dependencies":{"@red-cup-engineering/computer-ledger-system-services-section":"0.4.0","@red-cup-engineering/position-sizing-service":"0.2.0"},"devDependencies":{}}
