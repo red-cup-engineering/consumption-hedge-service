@@ -1,6 +1,6 @@
 # derive-household-burn-series
 ## Requirements
-- `heating-season-grouping`: The operation must group monthly readings into heating seasons running July of a start year through June of the next, labeled `"<startYear>-<startYear+1>"`.
+- `heating-season-grouping`: The operation must group monthly readings into heating seasons running July of a start year through June of the next, labeled `"<startYear>-<endYear>"`, where endYear is the year after startYear.
 - `admits-one-complete-season`: The operation must return an admitted burn series (average season total and a joule barrier) when at least one heating season ending at or before `input.asOf` is present.
 ## Prohibitions
 - `refuses-fewer-than-one-season`: The operation must refuse, returning a refusal datum naming the cutoff date rather than fabricating a barrier, when no season in the input is complete (ends at or before `input.asOf`). [claims: no-complete-season-no-barrier]
