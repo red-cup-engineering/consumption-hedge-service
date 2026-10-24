@@ -39,7 +39,7 @@ the first fixture, not a projection.
   CLI/NDJSON faces over each domain function, one operation per script.
 - **`./cli`** (also the `consumption-hedge` bin) — the composed app: `burn`, `position`, `book`,
   `mark`, `repay`, `status`. `burn` and `position` are pure; `book`, `mark`, and `repay` record
-  their result as a receipt through the semiotic-EAVT journal (`@red-cup-engineering/semiotic-eavt-engineering-services-section`) at
+  their result as a receipt through the semiotic-EAVT journal (`@red-cup-engineering/semiotic-eavt-services-section`) at
   `--root`; `status` reads the journal back.
 
 ## The hedge decision
