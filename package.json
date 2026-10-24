@@ -35,7 +35,7 @@
   "dependencies": {
     "@red-cup-engineering/pool-service": "workspace:*",
     "@red-cup-engineering/position-sizing-service": "workspace:*",
-    "@red-cup-engineering/semiotic-eavt-engineering-services-section": "workspace:*"
+    "@red-cup-engineering/semiotic-eavt-services-section": "workspace:*"
   },
   "engines": {
     "node": ">=24"
