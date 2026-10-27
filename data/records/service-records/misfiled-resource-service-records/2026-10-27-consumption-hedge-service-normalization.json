@@ -1,0 +1,96 @@
+{
+  "id": "2026-10-27-consumption-hedge-service-normalization",
+  "kind": "misfiled-resources-register",
+  "by": "apply-services-section-normalization",
+  "date": "2026-10-27",
+  "moved": [
+    {
+      "from": "data/records/fabrication-receipt-records/book-hedge-position-fabrication-receipt.json",
+      "to": "data/records/service-records/fabrication-receipt-service-records/book-hedge-position-fabrication-receipt.json",
+      "rule": "eavt-data-law",
+      "sourceSha256": "24f020129c41e216db6f929497e088f5c9bf5a847c2f1e1bc330b5e035f6d9b7",
+      "destinationSha256": "24f020129c41e216db6f929497e088f5c9bf5a847c2f1e1bc330b5e035f6d9b7",
+      "byteIdentical": true
+    },
+    {
+      "from": "data/records/fabrication-receipt-records/derive-hedge-position-fabrication-receipt.json",
+      "to": "data/records/service-records/fabrication-receipt-service-records/derive-hedge-position-fabrication-receipt.json",
+      "rule": "eavt-data-law",
+      "sourceSha256": "6ff3cb68675566c772b2e7e08a6edef72ccd109e11e4294bd7c388d7c5f1ca08",
+      "destinationSha256": "6ff3cb68675566c772b2e7e08a6edef72ccd109e11e4294bd7c388d7c5f1ca08",
+      "byteIdentical": true
+    },
+    {
+      "from": "data/records/fabrication-receipt-records/derive-household-burn-series-fabrication-receipt.json",
+      "to": "data/records/service-records/fabrication-receipt-service-records/derive-household-burn-series-fabrication-receipt.json",
+      "rule": "eavt-data-law",
+      "sourceSha256": "791eb6756b2fdf15ea8f0998d86eb06a4baefc274f705d5a3eb28b6d1f3610d3",
+      "destinationSha256": "791eb6756b2fdf15ea8f0998d86eb06a4baefc274f705d5a3eb28b6d1f3610d3",
+      "byteIdentical": true
+    },
+    {
+      "from": "data/records/fabrication-receipt-records/mark-hedge-position-fabrication-receipt.json",
+      "to": "data/records/service-records/fabrication-receipt-service-records/mark-hedge-position-fabrication-receipt.json",
+      "rule": "eavt-data-law",
+      "sourceSha256": "1b9a000d6ef1e37dd551ed7f387dcfc397710565a1d5759eddf0c3a89aa032e6",
+      "destinationSha256": "1b9a000d6ef1e37dd551ed7f387dcfc397710565a1d5759eddf0c3a89aa032e6",
+      "byteIdentical": true
+    },
+    {
+      "from": "data/records/fabrication-receipt-records/settle-hedge-repayment-fabrication-receipt.json",
+      "to": "data/records/service-records/fabrication-receipt-service-records/settle-hedge-repayment-fabrication-receipt.json",
+      "rule": "eavt-data-law",
+      "sourceSha256": "01c3845c619b325eb755c2a294aa4a877446ef2a33f62cb37f1d0839f07b67ac",
+      "destinationSha256": "01c3845c619b325eb755c2a294aa4a877446ef2a33f62cb37f1d0839f07b67ac",
+      "byteIdentical": true
+    },
+    {
+      "from": "data/records/fabrication-work-order-records/book-hedge-position-fabrication-work-order.md",
+      "to": "data/records/service-records/fabrication-work-order-service-records/book-hedge-position-fabrication-work-order.md",
+      "rule": "eavt-data-law",
+      "sourceSha256": "7b37baa4f43b7c7603a7eb90c9e5e774aff472d808a3dc45b0ca39120e1cee3c",
+      "destinationSha256": "7b37baa4f43b7c7603a7eb90c9e5e774aff472d808a3dc45b0ca39120e1cee3c",
+      "byteIdentical": true
+    },
+    {
+      "from": "data/records/fabrication-work-order-records/derive-hedge-position-fabrication-work-order.md",
+      "to": "data/records/service-records/fabrication-work-order-service-records/derive-hedge-position-fabrication-work-order.md",
+      "rule": "eavt-data-law",
+      "sourceSha256": "bc6cfc6b2947fcf8b41dcbfb211303ebc95d332d0a3bc5b1cb0bc462200798ab",
+      "destinationSha256": "bc6cfc6b2947fcf8b41dcbfb211303ebc95d332d0a3bc5b1cb0bc462200798ab",
+      "byteIdentical": true
+    },
+    {
+      "from": "data/records/fabrication-work-order-records/derive-household-burn-series-fabrication-work-order.md",
+      "to": "data/records/service-records/fabrication-work-order-service-records/derive-household-burn-series-fabrication-work-order.md",
+      "rule": "eavt-data-law",
+      "sourceSha256": "ed7192810dcd57e5521980f09beaf48655bcf4353b1ca77615e596d78e685f53",
+      "destinationSha256": "ed7192810dcd57e5521980f09beaf48655bcf4353b1ca77615e596d78e685f53",
+      "byteIdentical": true
+    },
+    {
+      "from": "data/records/fabrication-work-order-records/mark-hedge-position-fabrication-work-order.md",
+      "to": "data/records/service-records/fabrication-work-order-service-records/mark-hedge-position-fabrication-work-order.md",
+      "rule": "eavt-data-law",
+      "sourceSha256": "06df4273cb874ea5ea18589b52ec4fc7ca94a73db136d742fefffd061d0e8749",
+      "destinationSha256": "06df4273cb874ea5ea18589b52ec4fc7ca94a73db136d742fefffd061d0e8749",
+      "byteIdentical": true
+    },
+    {
+      "from": "data/records/fabrication-work-order-records/settle-hedge-repayment-fabrication-work-order.md",
+      "to": "data/records/service-records/fabrication-work-order-service-records/settle-hedge-repayment-fabrication-work-order.md",
+      "rule": "eavt-data-law",
+      "sourceSha256": "d900bbf47034fef85a8dd1f0db2738970ed867e414d5b9e278b13a132adaafd7",
+      "destinationSha256": "d900bbf47034fef85a8dd1f0db2738970ed867e414d5b9e278b13a132adaafd7",
+      "byteIdentical": true
+    }
+  ],
+  "owed": [
+    {
+      "rule": "stray-top-level",
+      "reason": "LICENSE/ is not an entry the services-section law knows; its owner decides where it belongs",
+      "directory": ".",
+      "count": 1
+    }
+  ]
+}
