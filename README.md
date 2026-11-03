@@ -69,7 +69,7 @@ the sizing request beyond `position-sizing-service@0.2.0`'s current published sc
 composes forward-compatibly today. Another lot is adding `stage` and `barrierJoules` as read
 fields to that package tonight; once published, `deriveHedgePosition` needs no change — it
 already sends them. Similarly, `pool-service` (this section's sibling,
-`financial-engineering-services-section/services/pool-service/`) is being built tonight and was
+`computer-financial-systems-engineering-services-section/services/pool-service/`) is being built tonight and was
 empty at the time of this writing; `bookHedgePosition` and `settleHedgeRepayment` declare the
 interface this section expects of it — a member liability account paired one-to-one with a pool
 receivable account, draws and repayments each witnessed and exactly matched in amount (the
